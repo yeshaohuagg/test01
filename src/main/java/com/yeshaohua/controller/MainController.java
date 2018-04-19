@@ -29,7 +29,7 @@ public class MainController {
     @RequestMapping(value ="/toJson",method=RequestMethod.POST)
     @ResponseBody
     public User toJson(User user){
-        service.addUser(user); //一起测试了
+        service.addUser(user);
         return service.findUserById(2);
     }
 }
