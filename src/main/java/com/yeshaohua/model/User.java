@@ -4,6 +4,14 @@ public class User {
     private String username;
     private String password;
     private int id;
+    private int age;
+
+    public User(String username, String password, int id, int age) {
+        this.username = username;
+        this.password = password;
+        this.id = id;
+        this.age = age;
+    }
 
 
     public String getUsername() {
@@ -42,5 +50,13 @@ public class User {
     }
 
     public User() {
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }

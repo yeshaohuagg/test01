@@ -10,7 +10,7 @@ public interface UserMapper {
     @Select("select * from user where id = #{id}")
     User findUserById(int id);
 
-    @Insert("insert into user(username,password) values(#{username},#{password})")
+    @Insert("insert into user(username,password,id,age) values(#{username},#{password},#{id},#{age})")
     void addUser(User user);
 
     @Select("select * from user")

@@ -5,6 +5,7 @@ import com.yeshaohua.service.IUserService;
 import com.yeshaohua.service.UserServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -28,8 +29,8 @@ public class MainController {
 
     @RequestMapping(value ="/toJson",method=RequestMethod.POST)
     @ResponseBody
-    public User toJson(User user){
+    public User toJson(@RequestBody User user){
         service.addUser(user);
-        return service.findUserById(2);
+        return service.findUserById(user.getId());
     }
 }

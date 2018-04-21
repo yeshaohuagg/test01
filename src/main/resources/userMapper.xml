@@ -8,6 +8,6 @@
         select * from user where id = #{id}
     </select>
     <insert id="addUser" parameterType="com.yeshaohua.model.User">
-        insert into user(username,password) values(#{username},#{password})
+        insert into user(username,password,id,age) values(#{username},#{password},#{id},#{age})
     </insert>
 </mapper>
